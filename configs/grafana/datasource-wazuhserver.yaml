@@ -1,0 +1,21 @@
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: prometheus-wazuh
+  namespace: grafana
+spec:
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  datasource:
+    name: prometheus-wazuh
+    type: prometheus
+    access: proxy
+    basicAuth: false
+    url: http://20.104.226.93:9090
+    isDefault: false
+    jsonData:
+      "tlsSkipVerify": true
+      "timeInterval": "5s"
+    editable: true

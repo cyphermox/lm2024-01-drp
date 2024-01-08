@@ -1,0 +1,12 @@
+loki:
+  enabled: true
+  persistence:
+    enabled: true
+    storageClass: standard
+promtail:
+  enabled: true
+sidecar:
+ datasources:
+   enabled: true
+image:
+ tag: 8.3.5

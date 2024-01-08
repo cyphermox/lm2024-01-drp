@@ -1,0 +1,15 @@
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDashboard
+metadata:
+  name: blackbox-exporter-from-cluster-dashboard
+  namespace: grafana
+spec:
+  datasources:
+    - inputName: "DS_PROMETHEUS"
+      datasourceName: "monitoring-prometheus"
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  grafanaCom:
+    id: 13659

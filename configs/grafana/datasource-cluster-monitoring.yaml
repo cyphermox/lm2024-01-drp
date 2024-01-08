@@ -1,0 +1,19 @@
+---
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
+metadata:
+  name: monitoring-prometheus
+  namespace: monitoring
+spec:
+  allowCrossNamespaceImport: true
+  datasource:
+    access: proxy
+    type: prometheus
+    jsonData:
+      timeInterval: 5s
+      tlsSkipVerify: true
+    name: monitoring-prometheus
+    url: http://prometheus-operated.monitoring:9090
+  instanceSelector:
+    matchLabels:
+      dashboards: grafana
