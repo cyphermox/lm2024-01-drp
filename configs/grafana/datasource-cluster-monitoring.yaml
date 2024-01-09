@@ -3,7 +3,7 @@ apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDatasource
 metadata:
   name: monitoring-prometheus
-  namespace: monitoring
+  namespace: grafana
 spec:
   allowCrossNamespaceImport: true
   datasource:

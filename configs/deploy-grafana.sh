@@ -1,3 +1,3 @@
 #!/bin/bash
 #
-kubectl apply -n monitoring -f grafana/
+kubectl apply -n grafana -f grafana/
